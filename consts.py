@@ -20,6 +20,10 @@ def unknown(command):
 def invalid(command):
     return f'Invalid format from command {command}. Use ——> help'
 
+
+def primary(error):
+    return f'Error: {error}'
+
 # == SUCCESS ==
 __path_to_file = 'Path to file saved. Use ——> -F for watch'
 __w_or_s = 'Sentence has been successfully saved. Use ——> -S for watch'

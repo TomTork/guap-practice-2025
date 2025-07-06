@@ -1,3 +1,4 @@
+import re
 import consts
 import search
 
@@ -51,3 +52,7 @@ def save_destination(command):
         search.Destination = command[1]
         return consts.__destination
     return consts.invalid(' '.join(command))
+
+
+def remove_not_necessarily_symbols(text):
+    return re.sub(r'(\s|!|\.|,|;|:|\?|\'|\"|<|>|/|\\|@|#|$|%|^|&|\*|\(|\)|`|~)+', ' ', text).strip()

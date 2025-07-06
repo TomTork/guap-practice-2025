@@ -1,0 +1,2 @@
+--file /Users/tomtork/PycharmProjects/practice/test/test.rtf d /Users/tomtork/PycharmProjects/practice/output/result.txt search "Французских булок"
+--file /Users/tomtork/PycharmProjects/practice/test/test.rtf search "Французских булок"
