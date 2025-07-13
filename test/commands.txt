@@ -4,3 +4,5 @@
 --file /Users/tomtork/PycharmProjects/practice/test/task.doc search "проГРАМмное средство"
 --file /Users/tomtork/PycharmProjects/practice/test/task.pdf search "Цели и задачи практик"
 --file /Users/tomtork/PycharmProjects/practice/test/task.html search "Учебный"
+--file /Users/tomtork/PycharmProjects/practice/test/test.txt search "кит"
+--file /Users/tomtork/PycharmProjects/practice/test/test.txt search "Фрегат"
