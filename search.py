@@ -77,14 +77,10 @@ def levenshtein_distance(s1, s2):
     for i, c1 in enumerate(s1, 1):
         curr_row = [i]
         for j, c2 in enumerate(s2, 1):
-            if c1 == c2:
-                cost = 0
-            else:
-                cost = 1
             curr_row.append(min(
                 prev_row[j] + 1,  # Операция удаления
                 curr_row[j - 1] + 1,  # Операция вставки
-                prev_row[j - 1] + cost  # Операция замены
+                prev_row[j - 1] + (0 if c1 == c2 else 1)  # Операция замены
             ))
         prev_row = curr_row
     return prev_row[-1]
