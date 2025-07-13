@@ -68,7 +68,7 @@ def save_destination(command):
 
 
 def remove_not_necessarily_symbols(text):
-    return re.sub(r'(\s|!|\.|,|;|:|\?|\'|\"|<|>|/|\\|@|#|$|%|^|&|\*|\(|\)|`|~)+', ' ', text).strip()
+    return re.sub(r'(\s|\t|!|\.|,|;|:|\?|\'|\"|<|>|/|\\|@|#|$|%|^|&|\*|\(|\)|`|~)+', ' ', text).strip()
 
 
 def read_html(path: str) -> str:
