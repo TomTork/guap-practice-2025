@@ -4,21 +4,17 @@ import helper
 Destination = 't'
 Search = ''
 File = ''
+Data = ''
 
-def run():
-    global Destination, Search, File
+def run() -> str:
+    global Destination, Search, File, Data
 
     if not Search.strip():
         return consts.primary('Search pattern is empty!')
 
     result = []
     search_text = helper.remove_not_necessarily_symbols(Search.lower())
-
-    try:
-        with open(File, 'r') as file:
-            source_text = file.read().lower()
-    except BaseException as error:
-        return consts.primary(error)
+    source_text = Data.lower()
 
     translated_text = helper.remove_not_necessarily_symbols(source_text)
     search_numerate = []
@@ -46,8 +42,12 @@ def run():
             else:
                 break
         if ans_start_pos != -1 and ans_end_pos != -1:
-            result.append((ans_start_pos, ans_end_pos))
-    return result
+            result.append((ans_start_pos, ans_end_pos, Data[ans_start_pos:ans_end_pos]))
+    if Destination != 't':
+        f = open(Destination, 'w', encoding='utf-8')
+        f.write(str(result))
+        return f'Saved to {Destination}'
+    return str(result)
 
 
 def check_run_levenshtein(s1, s2):

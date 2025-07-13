@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Личный кабинет ГУАП</title>
+        <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon">
+
+                                    <link rel="stylesheet" href="/build/ny_plugin.b0fd0523.css">
+                <link rel="stylesheet" href="/build/scssStyle.17212231.css">
+                <link rel="stylesheet" href="/build/newStyle.cdf68afb.css">
+                <link rel="stylesheet" href="/build/app.561392ec.css">
+                    
+                    <script src="/build/runtime.909d0688.js"></script><script src="/build/755.6752b871.js"></script><script src="/build/227.d832ea28.js"></script><script src="/build/804.534fcb29.js"></script><script src="/build/329.2255aaef.js"></script><script src="/build/546.6dd63597.js"></script><script src="/build/88.73c693aa.js"></script><script src="/build/1.f3ce4a2f.js"></script><script src="/build/694.51da4544.js"></script><script src="/build/app.5c2f91db.js"></script>
+            <script src="/build/waves.dcad5ebe.js"></script>
+            </head>
+
+    <body class="theme__blue">
+        <header>
+    <nav class="navbar navbar-expand-md p-0 fixed-top">
+        <button id="menu-burger" type="button" class="header-link header-link-transform d-mobile-none ms-2"
+                data-bs-toggle="collapse"
+                data-bs-target="#sidebar" aria-expanded="true" aria-controls="menu">
+            <i class="fa fa-bars suai-hover-theme"></i>
+        </button>
+        <div class="me-auto d-flex justify-content-center align-items-center ms-3 ms-lg-0">
+            <a class="navbar-brand desktop-center" href="/">
+                                    <img src="/images/logo.svg" width="90px" alt="ГУАП">
+                            </a>
+        </div>
+
+        <div class="navbar-right">
+            <ul class="nav no-borders">
+                <li class="nav-item">
+                    <div class="form-check form-switch pt-3 p-4">
+                        <form action="/theme/switch/save" method="post" id="theme-switch-form">
+                            <input type="hidden" name="token" value="fd.QVaIP9j_YzldK9Nagt6Gi2E77jnYo1eIIjFDj6dfTVQ.OybwRoGUOVcoSuEQ3YH88hJonkOh0A_AEAN06cwSCSM5HcRe7K0aWzF84w">
+                            <label class="form-check-label ms-3" for="lightSwitch">
+                                                                    <i id="deep-dark-switcher" class="fa fa-sun" style="color: #eca307; scale: 1.7"></i>
+                                    <input type="hidden" name="switch" value="on">
+                                                            </label>
+                        </form>
+                    </div>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/inside/edit/profile">
+                        <i class="fa-solid fa-user-pen "></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/logout">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<script>
+    $(function () {
+        $('#deep-dark-switcher').click(function () {
+            $('#theme-switch-form').submit();
+        });
+    });
+</script>
+        <menu class="d-lg-none sidebar sidebar__mobile offcanvas-lg offcanvas-start" id="sidebar-mobile"
+              aria-labelledby="sidebar">
+            <div class="offcanvas-header">
+    <a class="navbar-brand" href="/">
+                    <img src="/images/logo.svg" width="90px" alt="ГУАП">
+            </a>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebar-mobile" aria-label="Закрыть"></button>
+</div>
+<div class="offcanvas-body p-0">
+    <ul class="sidebar__menu nav flex-column">
+    <li>
+                        <a href='/inside/profile'> Профиль </a>
+                    </li><li>
+                        <a href='/inside/student/tasks'> Задания </a>
+                    </li><li>
+                        <a href='/inside/student/materials'> Материалы </a>
+                    </li><li>
+                        <a href='/inside/student/reports'> Отчеты </a>
+                    </li><li>
+                        <a href='/inside/student/marks/new'> Зачетная книжка </a>
+                    </li><li>
+                        <a href='/inside/student/notice'> Объявления<span title="Кол-во непрочитанных объявлений" class="ms-1 badge text-bg-warning align-text-top">70</span> </a>
+                    </li><li>
+                       <button class='sub-menu' data-bs-toggle='collapse' data-bs-target='#submenu74-collapse' aria-expanded='false'>
+                          Учебный процесс
+                       </button>
+                       <div class='collapse ' id='submenu74-collapse'>
+					        <ul class='nav nav-second-level'><li>
+                        <a href='/inside/students/subjects/new'> Дисциплины </a>
+                    </li><li>
+                        <a href='/inside/student/edutrack/'> Треки </a>
+                    </li><li>
+                        <a href='/inside/student/groups'> Группа </a>
+                    </li><li>
+                        <a href='/inside/students/alternative'> Выбор предмета </a>
+                    </li></ul></div></li><li>
+                       <button class='sub-menu' data-bs-toggle='collapse' data-bs-target='#submenu76-collapse' aria-expanded='false'>
+                          Образовательная среда
+                       </button>
+                       <div class='collapse ' id='submenu76-collapse'>
+					        <ul class='nav nav-second-level'><li>
+                        <a href='/inside/library'> Библиотека </a>
+                    </li><li>
+                        <a href='https://lms.guap.ru/my/courses.php'> LMS </a>
+                    </li><li>
+                        <a href='https://lms.guap.ru/fdpo/course/view.php?id=1'> LMS ФДПО </a>
+                    </li><li>
+                        <a href='/inside/publications'> Публикации </a>
+                    </li><li>
+                        <a href='/inside/student/professors'> Преподаватели </a>
+                    </li></ul></div></li><li>
+                       <button class='sub-menu' data-bs-toggle='collapse' data-bs-target='#submenu75-collapse' aria-expanded='false'>
+                          Сервисы
+                       </button>
+                       <div class='collapse ' id='submenu75-collapse'>
+					        <ul class='nav nav-second-level'><li>
+                        <a href='/inside/references'> Справки </a>
+                    </li><li>
+                        <a href='/inside/evaluation/subjects'> Оценки дисциплин </a>
+                    </li><li>
+                        <a href='/inside/feedback'> Обратная связь </a>
+                    </li></ul></div></li><li>
+                        <a href='/inside/students/schedule'> Расписание </a>
+                    </li><li>
+                        <a href='/inside/student/documents'> Мои документы </a>
+                    </li><li>
+                        <a href='/inside/navigation'> Навигация </a>
+                    </li><li>
+                        <a href='/help'> Помощь </a>
+                    </li>
+</ul></div>            <div class="sidebar__footer text-center p-2 text-nowrap">
+    <span class="small fw-light">Личный кабинет</span>
+    <div class="small fw-semibold"> УЦР ГУАП 2025 </div>
+</div>        </menu>
+
+        <div class="page__content container-fluid">
+            <div class="row flex-nowrap overflow-hidden position-relative">
+                <menu class="d-mobile-none sidebar col-auto px-0 collapse collapse-horizontal show" id="sidebar">
+                    <nav class="sidebar__navigation shadow-sm mb-3">
+    <div class="profile-picture">
+        <div class="profile-picture__photo profile_image_sm profile_image_wrap ou
+            outline-success">
+            <a href="/inside/profile">
+                <img alt="logo" class="profile_image" src="/avatars/47/46738.jpg">
+            </a>
+        </div>
+        <div class="profile-picture__desc">
+            <span class="d-block w-100 text-center">Саиткулов Дмитрий Игоревич</span>
+        </div>
+    </div>
+</nav>
+<nav class="sidebar__navigation shadow-sm">
+    <ul class="sidebar__menu nav flex-column">
+    <li>
+                        <a href='/inside/profile'> Профиль </a>
+                    </li><li>
+                        <a href='/inside/student/tasks'> Задания </a>
+                    </li><li>
+                        <a href='/inside/student/materials'> Материалы </a>
+                    </li><li>
+                        <a href='/inside/student/reports'> Отчеты </a>
+                    </li><li>
+                        <a href='/inside/student/marks/new'> Зачетная книжка </a>
+                    </li><li>
+                        <a href='/inside/student/notice'> Объявления<span title="Кол-во непрочитанных объявлений" class="ms-1 badge text-bg-warning align-text-top">70</span> </a>
+                    </li><li>
+                       <button class='sub-menu' data-bs-toggle='collapse' data-bs-target='#submenu74-collapse' aria-expanded='false'>
+                          Учебный процесс
+                       </button>
+                       <div class='collapse ' id='submenu74-collapse'>
+					        <ul class='nav nav-second-level'><li>
+                        <a href='/inside/students/subjects/new'> Дисциплины </a>
+                    </li><li>
+                        <a href='/inside/student/edutrack/'> Треки </a>
+                    </li><li>
+                        <a href='/inside/student/groups'> Группа </a>
+                    </li><li>
+                        <a href='/inside/students/alternative'> Выбор предмета </a>
+                    </li></ul></div></li><li>
+                       <button class='sub-menu' data-bs-toggle='collapse' data-bs-target='#submenu76-collapse' aria-expanded='false'>
+                          Образовательная среда
+                       </button>
+                       <div class='collapse ' id='submenu76-collapse'>
+					        <ul class='nav nav-second-level'><li>
+                        <a href='/inside/library'> Библиотека </a>
+                    </li><li>
+                        <a href='https://lms.guap.ru/my/courses.php'> LMS </a>
+                    </li><li>
+                        <a href='https://lms.guap.ru/fdpo/course/view.php?id=1'> LMS ФДПО </a>
+                    </li><li>
+                        <a href='/inside/publications'> Публикации </a>
+                    </li><li>
+                        <a href='/inside/student/professors'> Преподаватели </a>
+                    </li></ul></div></li><li>
+                       <button class='sub-menu' data-bs-toggle='collapse' data-bs-target='#submenu75-collapse' aria-expanded='false'>
+                          Сервисы
+                       </button>
+                       <div class='collapse ' id='submenu75-collapse'>
+					        <ul class='nav nav-second-level'><li>
+                        <a href='/inside/references'> Справки </a>
+                    </li><li>
+                        <a href='/inside/evaluation/subjects'> Оценки дисциплин </a>
+                    </li><li>
+                        <a href='/inside/feedback'> Обратная связь </a>
+                    </li></ul></div></li><li>
+                        <a href='/inside/students/schedule'> Расписание </a>
+                    </li><li>
+                        <a href='/inside/student/documents'> Мои документы </a>
+                    </li><li>
+                        <a href='/inside/navigation'> Навигация </a>
+                    </li><li>
+                        <a href='/help'> Помощь </a>
+                    </li>
+</ul></nav>                    <div class="sidebar__footer text-center p-2 text-nowrap">
+    <span class="small fw-light">Личный кабинет</span>
+    <div class="small fw-semibold"> УЦР ГУАП 2025 </div>
+</div>                </menu>
+                <div id="wrapper" class="col flex-shrink-1 p-0">
+                    <div class="container-fluid p-3">
+
+                                                
+                            <div class="breadcrumb__container"><ol id="wo-breadcrumbs" class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><li                            itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><span itemprop="name">Материалы</span><meta itemprop="item" content="/inside/student/materials"/><meta itemprop="position" content="1"/></li></ol></div>
+
+    <div class="d-flex justify-content-between align-items-center mb-2">
+    <h3 class="page__title">Материалы</h3>
+    </div>
+
+
+<form method="get" action="/inside/student/materials" id="inside_student_materials_index">
+                        <div class="card shadow-sm card-filter">
+    <div class="card-body">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+            
+<div class="form-group ">
+            <label for="semesters"
+               class="col-form-label-sm col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 ">Семестры:
+                    </label>
+    
+    <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+        <select id="semesters" class="form-select form-select-sm "
+                name="semester"
+                
+                
+        >
+                                                        <option value="27" >2025/2026 весенний</option>
+                                            <option value="26" >2025/2026 осенний</option>
+                                            <option value="25" selected>2024/2025 весенний</option>
+                                            <option value="24" >2024/2025 осенний</option>
+                                            <option value="23" >2023/2024 весенний</option>
+                                            <option value="22" >2023/2024 осенний</option>
+                                            <option value="21" >2022/2023 весенний</option>
+                                            <option value="20" >2022/2023 осенний</option>
+                                            <option value="19" >2021/2022 весенний</option>
+                                            <option value="18" >2021/2022 осенний</option>
+                                            <option value="17" >2020/2021 весенний</option>
+                                            <option value="16" >2020/2021 осенний</option>
+                                            <option value="15" >2019/2020 весенний</option>
+                                            <option value="14" >2019/2020 осенний</option>
+                                            <option value="13" >2018/2019 весенний</option>
+                                            <option value="12" >2018/2019 осенний</option>
+                                            <option value="11" >2017/2018 весенний</option>
+                                            <option value="10" >2017/2018 осенний</option>
+                                            <option value="9" >2016/2017 весенний</option>
+                                            <option value="8" >2016/2017 осенний</option>
+                                            <option value="7" > 2015/2016 весенний</option>
+                                            <option value="6" > 2015/2016 осенний</option>
+                    </select>
+    </div>
+        
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            $("#semesters").select2({
+                tags: false,
+                width: "100%",
+                theme: "bootstrap-5",
+                dropdownParent: $('#semesters').parent(),
+            });
+        });
+    </script>
+
+</div>
+            
+<div class="form-group ">
+            <label for="subjects"
+               class="col-form-label-sm col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 ">Предметы:
+                    </label>
+    
+    <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+        <select id="subjects" class="form-select form-select-sm "
+                name="subject"
+                
+                
+        >
+                                                        <option value="0" >Все</option>
+                                            <option value="3376008" >Прикладная физическая культура (элективный модуль)</option>
+                                            <option value="3376010" >Алгоритмы и структуры данных</option>
+                                            <option value="3376011" >Функциональное и логическое программирование</option>
+                                            <option value="3376012" >Архитектура ЭВМ и систем</option>
+                                            <option value="3376013" >Прикладная теория вероятностей и статистика</option>
+                                            <option value="3376014" >Вычислительная математика</option>
+                                            <option value="3376029" selected>Учебная</option>
+                                            <option value="3397557" >Развитие критического инженерного мышления</option>
+                                            <option value="3397558" >Разработка и проектирование интеллектуальных программных средств машинного обучения</option>
+                                            <option value="3397919" >Проектирование сетевых приложений</option>
+                                            <option value="3397920" >Web-технологии</option>
+                                            <option value="3397921" >Объектно-ориентированное программирование</option>
+                    </select>
+    </div>
+        
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            $("#subjects").select2({
+                tags: false,
+                width: "100%",
+                theme: "bootstrap-5",
+                dropdownParent: $('#subjects').parent(),
+            });
+        });
+    </script>
+
+</div>        </div>
+
+        <button type="submit" class="btn btn-sm btn-info">Искать</button>
+    </div>
+</div>        
+        
+        
+        
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <style>
+    /* Устанавливаем перенос слов через пробелы */
+    .word-wrap {
+        word-wrap: normal;
+    }
+</style>
+
+<div class="mb-2">
+    <div class="d-flex flex-wrap p-0 w-100 justify-content-between">
+                            <form method="get" action="/inside/student/materials" class="d-flex flex-wrap p-0 w-100 justify-content-between">
+                                                <div class="d-flex me-1 my-1 align-items-center justify-content-between flex-basis-max">
+                                            <span class="me-2">Поиск:</span>
+                        <div class="d-flex align-items-center input-group input-group-sm">
+                            <input id="search" type="search" name="text" class="form-control form-control-sm"
+                                   value="">
+                            <button type="submit" class="btn btn-sm btn-info btn-outline">Искать</button>
+                        </div>
+                                    </div>
+                                    <div class="d-flex my-1 align-items-center flex-basis-max">
+    Показать
+    <select name="perPage" class="form-select form-select-sm flex-basis-max mx-2" id="per-page-select-on-list">
+                    <option value="10"
+                                >10</option>
+                    <option value="25"
+                                            selected="selected"
+                                >25</option>
+                    <option value="50"
+                                >50</option>
+                    <option value="100"
+                                >100</option>
+            </select>
+    записей на странице.
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            $("#per-page-select-on-list").change(function () {
+                let form = $('#per-page-select-on-list').closest('form');
+                if(form.length > 0) {
+                    form[0].submit()
+                }
+            });
+        });
+    </script>
+</div>                                            </form>
+                    </form>
+    </div>
+</div>
+
+<div class="col-12">
+    <div class="table-responsive">
+        <table class="table table-bordered rounded-1 table-striped table-hover shadow-sm">
+            <thead>
+            <tr>
+                                                                    <th class="word-wrap">Файл/Ссылка</th>
+                                                                                            <th class="word-wrap"><a class="sortable" href="/inside/student/materials?sort=d.subg&amp;direction=asc&amp;page=1" title="Дисциплина">
+    <span class="float-end">
+                    <i class="fa fa-sort"></i>
+            </span>
+    Дисциплина
+</a>
+</th>
+                                                                                            <th class="word-wrap"><a class="sortable" href="/inside/student/materials?sort=m.name&amp;direction=asc&amp;page=1" title="Название">
+    <span class="float-end">
+                    <i class="fa fa-sort"></i>
+            </span>
+    Название
+</a>
+</th>
+                                                                                            <th class="word-wrap"><a class="sortable" href="/inside/student/materials?sort=m.created&amp;direction=asc&amp;page=1" title="Дата добавления">
+    <span class="float-end">
+                    <i class="fa fa-sort"></i>
+            </span>
+    Дата добавления
+</a>
+</th>
+                                                                                            <th class="word-wrap"><a class="sortable" href="/inside/student/materials?sort=ui.lastname&amp;direction=asc&amp;page=1" title="Преподаватель">
+    <span class="float-end">
+                    <i class="fa fa-sort"></i>
+            </span>
+    Преподаватель
+</a>
+</th>
+                                                    </tr>
+            </thead>
+            <tbody>
+                                        <tr role="row" class="odd">
+    <td>
+        <div class="row">
+                            <div class="col-6">
+                    <a
+                    href="/inside/student/materials/e3ec88f5e414bcc6443778a0c62595c9/download"
+                target="_blank"
+        class="btn btn-sm btn-outline-dark" data-toggle="tooltip" title="Скачать">
+    <i class="fa fa-solid fa-download fs-6"></i>
+</a>                </div>
+            
+                    </div>
+    </td>
+    <td class="">
+                    <a class="blue-link" href="/inside/students/subjects/3376029">
+                Учебная
+            </a>
+            </td>
+    <td>
+        <span>Варианты заданий</span>
+    </td>
+
+    <td>
+        <span>23.06.2025 20:12:33</span>
+    </td>
+
+
+    <td>
+        <a class="blue-link" href="/inside/profile/911">
+            <span>Рогачев Сергей Александрович</span>
+        </a>
+    </td>
+</tr>                            <tr role="row" class="odd">
+    <td>
+        <div class="row">
+                            <div class="col-6">
+                    <a
+                    href="/inside/student/materials/21307dcd69a79709d56e4549fbe8df2b/download"
+                target="_blank"
+        class="btn btn-sm btn-outline-dark" data-toggle="tooltip" title="Скачать">
+    <i class="fa fa-solid fa-download fs-6"></i>
+</a>                </div>
+            
+                    </div>
+    </td>
+    <td class="">
+                    <a class="blue-link" href="/inside/students/subjects/3376029">
+                Учебная
+            </a>
+            </td>
+    <td>
+        <span>Титульный лист отчета о практике</span>
+    </td>
+
+    <td>
+        <span>23.06.2025 20:12:59</span>
+    </td>
+
+
+    <td>
+        <a class="blue-link" href="/inside/profile/911">
+            <span>Рогачев Сергей Александрович</span>
+        </a>
+    </td>
+</tr>                            <tr role="row" class="odd">
+    <td>
+        <div class="row">
+                            <div class="col-6">
+                    <a
+                    href="/inside/student/materials/d017e192498c0ba08924bbd36af515ab/download"
+                target="_blank"
+        class="btn btn-sm btn-outline-dark" data-toggle="tooltip" title="Скачать">
+    <i class="fa fa-solid fa-download fs-6"></i>
+</a>                </div>
+            
+                    </div>
+    </td>
+    <td class="">
+                    <a class="blue-link" href="/inside/students/subjects/3376029">
+                Учебная
+            </a>
+            </td>
+    <td>
+        <span>Индивидуальное задание</span>
+    </td>
+
+    <td>
+        <span>23.06.2025 20:13:23</span>
+    </td>
+
+
+    <td>
+        <a class="blue-link" href="/inside/profile/911">
+            <span>Рогачев Сергей Александрович</span>
+        </a>
+    </td>
+</tr>                            <tr role="row" class="odd">
+    <td>
+        <div class="row">
+                            <div class="col-6">
+                    <a
+                    href="/inside/student/materials/3a5b65df3036cc6a320f8ecc87a16469/download"
+                target="_blank"
+        class="btn btn-sm btn-outline-dark" data-toggle="tooltip" title="Скачать">
+    <i class="fa fa-solid fa-download fs-6"></i>
+</a>                </div>
+            
+                    </div>
+    </td>
+    <td class="">
+                    <a class="blue-link" href="/inside/students/subjects/3376029">
+                Учебная
+            </a>
+            </td>
+    <td>
+        <span>Организационные пояснения</span>
+    </td>
+
+    <td>
+        <span>23.06.2025 20:17:24</span>
+    </td>
+
+
+    <td>
+        <a class="blue-link" href="/inside/profile/911">
+            <span>Рогачев Сергей Александрович</span>
+        </a>
+    </td>
+</tr>                        </tbody>
+        </table>
+    </div>
+</div>
+
+    <div class="table__footer">
+        <div class="d-flex align-items-center justify-content-center clearfix flex-wrap-reverse">
+            <div class="float-start">Всего
+                4
+                записей
+            </div>
+            <div class="navigation mx-auto">
+                
+            </div>
+        </div>
+    </div>
+            </div>
+        </div>
+
+    </form>                    </div>
+                </div>
+            </div>
+        </div>
+
+                
+        <footer class="fixed-bottom bg-white shadow-lg mobile-menu">
+            <a class="mobile-menu__item" data-bs-toggle="offcanvas"
+               data-bs-target="#sidebar-mobile" aria-expanded="false">
+                <i class="fa fa-bars suai-hover-theme"></i>
+            </a>
+                            <a href="/inside/student/tasks/" class="mobile-menu__item">
+                    <i class="fa-regular fa-paste"></i>
+                </a>
+                        <a href="https://lms.guap.ru/" class="mobile-menu__item">
+                <span>LMS</span>
+            </a>
+            <a href="/inside/profile" class="mobile-menu__item">
+                <i class="fa-regular fa-user"></i>
+            </a>
+        </footer>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                let $element = $('.sidebar a[href="/inside/student/materials"]');
+                let $element_mobile = $('.mobile-menu a[href="/inside/student/materials"]');
+
+                $element.addClass('_active');
+                $element_mobile.addClass('_active');
+
+                let $item = $element.parents('li:has(.sub-menu)');
+                if ($item.length) {
+                    $item.children('.sub-menu').attr('aria-expanded', 'true');
+                    $item.children('.collapse').addClass('show');
+                }
+            });
+        </script>
+                
+            <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(86883871, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/86883871" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- Top.Mail.Ru counter -->
+    <script type="text/javascript">
+        var _tmr = window._tmr || (window._tmr = []);
+        _tmr.push({id: "3604540", type: "pageView", start: (new Date()).getTime()});
+        (function (d, w, id) {
+            if (d.getElementById(id)) return;
+            var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+            ts.src = "https://top-fwz1.mail.ru/js/code.js";
+            var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+            if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+        })(document, window, "tmr-code");
+    </script>
+    <noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3604540;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div></noscript>
+    <!-- /Top.Mail.Ru counter -->
+    </body>
+</html>

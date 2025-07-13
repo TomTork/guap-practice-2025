@@ -1,7 +1,7 @@
 import consts
 import helper
 import search
-import shlex
+import shlex  # Правильный split терминальной команды
 
 print(consts.__help)
 
@@ -16,8 +16,10 @@ while consts.__run:
             print(search.Search)
         case '-D':
             print(search.Destination)
+        case '-V':
+            print(search.Data)
         case _ if command[0] in consts.__q:
-            print('Exiting...')
+            print('Exit...')
             consts.__run = False
         case _ if command[0] in consts.__h:
             print(consts.__help)

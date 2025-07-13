@@ -1,2 +1,6 @@
 --file /Users/tomtork/PycharmProjects/practice/test/test.rtf d /Users/tomtork/PycharmProjects/practice/output/result.txt search "Французских булок"
---file /Users/tomtork/PycharmProjects/practice/test/test.rtf search "Французских булок да"
+--file /Users/tomtork/PycharmProjects/practice/test/test.rtf search "Французские булки"
+--file /Users/tomtork/PycharmProjects/practice/test/task.docx search "дата"
+--file /Users/tomtork/PycharmProjects/practice/test/task.doc search "проГРАМмное средство"
+--file /Users/tomtork/PycharmProjects/practice/test/task.pdf search "Цели и задачи практик"
+--file /Users/tomtork/PycharmProjects/practice/test/task.html search "Учебный"

@@ -25,6 +25,6 @@ def primary(error):
     return f'Error: {error}'
 
 # == SUCCESS ==
-__path_to_file = 'Path to file saved. Use ——> -F for watch'
+__path_to_file = 'Path to file saved. Use ——> -F for watch path\nUse ——> -V for watch value'
 __w_or_s = 'Sentence has been successfully saved. Use ——> -S for watch'
 __destination = 'Destination path successfully saved. Use ——> -D for watch'
