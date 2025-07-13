@@ -1,3 +1,4 @@
+import os.path
 import consts
 import helper
 
@@ -44,9 +45,13 @@ def run() -> str:
         if ans_start_pos != -1 and ans_end_pos != -1:
             result.append((ans_start_pos, ans_end_pos, Data[ans_start_pos:ans_end_pos]))
     if Destination != 't':
-        f = open(Destination, 'w', encoding='utf-8')
-        f.write(str(result))
-        return f'Saved to {Destination}'
+        if os.path.exists(Destination):
+            f = open(Destination, 'w', encoding='utf-8')
+            f.write(str(result))
+            f.close()
+            return f'Saved to {Destination}'
+        else:
+            return consts.primary(f'Destination {Destination} does not exist!')
     return str(result)
 
 
